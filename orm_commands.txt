@@ -1,0 +1,44 @@
+import model in powershell
+
+
+1. from students.model import Student
+
+#model.objects.
+
+we have imported Student, it is a model
+
+Student.objects.all()
+-- it returns all objects inside the model as objects so we have to assign it to the variable
+
+students = Student.objects.all()
+
+--it gives multiple objects so we have to run / use for loop to print
+
+--if any return only one object no need to use for loop
+
+for student in students:
+  print(student.name)
+  print(student.email)
+
+
+Student.objects.all().values()
+
+Student.objects.values("name","age")
+
+
+Student.objects.filter(age__gt = 8)
+Student.objects.filter(age__gte = 8)
+
+Student.objects.filter(age__lt = 8)
+Student.objects.filter(age__lte = 8)
+
+Student.objects.all().order_by('age')
+Student.objects.all().order_by('-age')
+
+Student.objects.create(name = "hari",email="hari@example.com",age = 18 )
+
+hari =
+hari.save()
+
+
+
